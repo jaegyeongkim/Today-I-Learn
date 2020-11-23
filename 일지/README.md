@@ -10,11 +10,9 @@ Git에 대해 준비해보는 게 좋을듯 하다. DreamCoding의 엘리가 강
 
 한번 피드백을 받아보는 게 좋을듯하다.
 
-참고 Github는 다음과 같다.
+참고 Github [Link](https://github.com/JaeYeopHan/Interview_Question_for_Beginner#%EB%A9%B4%EC%A0%91%EC%97%90%EC%84%9C-%EB%B0%9B%EC%95%98%EB%8D%98-%EC%A7%88%EB%AC%B8%EB%93%A4
 
-https://github.com/JaeYeopHan/Interview_Question_for_Beginner#%EB%A9%B4%EC%A0%91%EC%97%90%EC%84%9C-%EB%B0%9B%EC%95%98%EB%8D%98-%EC%A7%88%EB%AC%B8%EB%93%A4
-
-
+[)는 다음과 같다.
 
 ## 2020-11-22
 
