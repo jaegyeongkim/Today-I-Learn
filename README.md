@@ -180,6 +180,24 @@ git difftoole --staged
 
 #### git commit
 
+commit 추가
+
+```bash
+git commit -m "커밋 메시지"
+```
+
+commit 내역 확인
+
+```bash
+git log
+```
+
+staging area와 working directory에 있는 모든 파일을 commit 메시지와 함께 commit
+
+```bash
+git commit -am "커밋 메시지"
+```
+
 
 
 ### 그냥 명령어
