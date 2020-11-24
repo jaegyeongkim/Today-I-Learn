@@ -7,6 +7,7 @@
 * [What is this](#TIL?)
 * [Git](#Git)
 * [일지](#일지)
+* [알고리즘](#알고리즘)
 
 ## TIL?
 
@@ -29,3 +30,9 @@ DreamCoding Git 마스터 과정을 수강하며 정리했던 내용들
 ## 일지 [Link](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/%EC%9D%BC%EC%A7%80)
 
 매일매일 커밋하면서 일지를 작성해보았습니다.
+
+
+
+## 알고리즘 [Link]()
+
+알고리즘 공부한 거 정리
