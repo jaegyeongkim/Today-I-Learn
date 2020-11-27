@@ -1,5 +1,9 @@
 # Today I Learn
 
+## Commit Rules
+
+**Add, Update, Delete Contents Date**
+
 
 
 ## :memo: Table of Contents
