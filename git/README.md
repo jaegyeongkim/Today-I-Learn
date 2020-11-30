@@ -312,6 +312,78 @@ git push origin --delete v1.0.0 #delete a remote tag
 
 
 
+### Branch
+
+#### Creating branch
+
+```bash
+git branch testing		# create a new branch called testing
+git checkout testing	# switches to testing branch
+git switch testing		# same as the above
+git checkout -b testing	# create and switch to testing
+git switch -C testing 	# same as the above
+```
+
+#### Managing Branch
+
+```bash
+git branch # simple listing of all branches
+git branch -r # sees the remote branches
+git branch --all # list including remote branches
+git branch -v # sees the last commit on each branch
+git branch --merged # sees merged branches
+git branch --no-merged # sees not merged branches
+git branch -d testing # deletes the branch
+git push origin --delete testing
+git branch --move wrong correct # rename wrong -> correct
+git push --set-upstream origin correct # push new name
+```
+
+#### Comparing
+
+```bash
+git log branch1..branch2 # all the commits between branch1 and branch2
+git diff branch1..branch2 # all the changes between branch1 and branch2
+```
+
+#### Merge
+
+```bash
+git merge featureA	# merges featureA branch into the current one
+git merge --squash featureA # squash merge, only one commit
+git merge --no-ff featureA # creates a merge commit
+git merge --continue # merge continue
+git merge --abort # merge cancle
+git mergetool # open merge tool
+```
+
+#### Rebasing
+
+Rebase
+
+![4](assets/4.PNG)
+
+Rebase --onto
+
+![5](assets/5.PNG)
+
+```bash
+git rebase master # rebase current branch onto the master
+git rebase --onto master servie-ui # take commit of the ui branch forked from the service branch and move them to master
+```
+
+#### Cherry picking
+
+![image-20201130202842302](../../../../AppData/Roaming/Typora/typora-user-images/image-20201130202842302.png)
+
+원하는 기능, commit 만 쏘옥 뺴오기
+
+```bash
+git cherry-pick hash # applies the given commit
+```
+
+
+
 ## 그냥 명령어
 
 디렉토리 만들기
