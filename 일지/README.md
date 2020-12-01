@@ -30,6 +30,59 @@ Undo
 
 add 혹은 commit 혹은 working directory, staging area 에 있는 파일들 수정 사항들을 돌이키는 거
 
+**Python**
+
+**sort()**
+
+- list로 정렬된 상태로 변경
+- list만을 위한 메소드
+- 오름차순 정렬: sort()
+- 내림차순 정렬:sort(reverse=True)
+
+**sorted()**
+
+- 기존의  list를 변경하는 것이 아니라 정렬된 새로운 list를 반환
+- Dictionary 객체도 가능
+- 오름차순 정렬: sorted()
+- 내림차순 정렬: sorted(reverse=True)
+- key=lambda를 사용하면  tuple 형식으로 바뀜
+
+List
+
+```python
+a = [(1, 2), (0, 1), (5, 1), (5, 2), (3, 0)]
+b = sorted(a)
+# b = [(0, 1), (1, 2), (3, 0), (5, 1), (5, 2)]
+c = sorted(a, key=lambda x:x[0])
+# c = [(0, 1), (1, 2), (3, 0), (5, 1), (5, 2)]
+d = sorted(a, key=lambda x:x[1])
+# d = [(3, 0), (0, 1), (5, 1), (1, 2), (5, 2)]
+f = sorted(a, key=lambda x:-x[1])
+# f = [(5, 2), (1, 2), (5, 1), (0, 1), (3, 0)]
+```
+
+Dictionary
+
+```python
+student = {
+    'a': [1, 2],
+    'b': [2, 3],
+    'c': [3, 1]
+}
+print(sorted(student.items(), key=lambda x: -x[1][1]))
+print(sorted(student.items(), key=lambda x: -ord(x[0])))
+# [('b', [2, 3]), ('a', [1, 2]), ('c', [3, 1])]
+# [('c', [3, 1]), ('b', [2, 3]), ('a', [1, 2])]
+```
+
+**isdigit()**
+
+문자열이 숫자인지 아닌지 True, False return해줌
+
+isalpha()
+
+문자열이 문자인지 아닌지 True, False return 해줌
+
 ## 2020-11-30
 
 오늘은 Git 강의, 알고리즘 문제들을 풀었음
