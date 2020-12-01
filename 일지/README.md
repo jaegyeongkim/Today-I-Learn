@@ -79,7 +79,7 @@ print(sorted(student.items(), key=lambda x: -ord(x[0])))
 
 문자열이 숫자인지 아닌지 True, False return해줌
 
-isalpha()
+**isalpha()**
 
 문자열이 문자인지 아닌지 True, False return 해줌
 
