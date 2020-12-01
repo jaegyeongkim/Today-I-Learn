@@ -17,13 +17,13 @@
 
 What is this?
 
-SW 개발자로서 꾸준히 준비하고 싶다.
+SW 개발자로서 꾸준히 준비한 것을 체계화해서 정리하는 곳
 
-1일 1commit을 목표로 하루 하루 배운 것을 작성해 보겠다.
+1일 1commit을 목표로 하루 하루 배운 것와 실수를 카테고리화해서 체계적으로 분류
 
 일지는 시간 역순으로 작성되어있고
 
-CS 및 배움에 대한 정리를 h2와 TOC로 만들어 찾기 쉽게 만들어야겠다.
+
 
 ## [Git](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/git)
 
