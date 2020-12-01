@@ -384,6 +384,105 @@ git cherry-pick hash # applies the given commit
 
 
 
+### Stashing
+
+stack 형식으로 다른 곳에 잠시 저장해두는 것
+
+#### Saving
+
+```bash
+git stash push -m "message" # make a new stash with message
+git stash # same as above
+git stash --keep-index # stash but keep them in the staging area
+git stash -u # --include-untracked staging area에 없는 것도 같이 stash
+```
+
+#### Listing
+
+```bash
+git stash list # see all the stashes
+git stash show hash # see the given stash
+git stash show hash -p # see the given stash with details
+```
+
+#### Applying
+
+```bash
+git stash apply hash # applies the given stash
+git stash apply # applies the lastest stash, stack 가장 위에 있는 거 뽑아 옴
+git stash apply --index # apply the stated changes
+git stash pop # apply and drop, stack 가장 위에 있는 거 뽑아내고 적용
+git stash branch branchName # apply stash in a new branch
+```
+
+#### Deleting
+
+```bash
+git stash drop hash # deletes the given stash
+git stash clear # deletes all the stashes
+```
+
+
+
+### Undo
+
+#### Local Changes
+
+##### Unstaging a staged file
+
+```bash
+git reset HEAD file.txt
+```
+
+##### Unmodifying a modified file
+
+```bash
+git checkout --file.txt
+```
+
+##### Discarding local changes
+
+discard(버리다, 폐기하다)
+
+```bash
+git restore --staged file.txt # unstaging a staged file
+git restore file.txt # unmodifying a modified file
+git restore . # unmodifying all modified files in the directory, staging area에 있는 파일 지우기
+git clean -fd # removes all untracked files, staging area에 없는 파일도 다 지우기
+```
+
+##### Restoring file from certain commit
+
+restore(복원하다) 작업하는 내용을 초기화
+
+```bash
+git restore --source-hash file.txt
+git restore --source=HEAD~2 file,txt
+```
+
+#### Commit
+
+##### Amending the last commit
+
+amend(수정하다)
+
+```bash
+git commit --amend # 
+git commit --amend -m "message" # 
+```
+
+#### Reset
+
+특정한 commit으로 모두 초기화 시켜주는 명령어
+
+```bash
+git reset --soft HEAD # removes the commit and keep changes at staging area
+git reset --mixed HEAD # removes the commit and keep changes at working directory
+git reset --hard HEAD # removes the commit and don't keep the code
+```
+
+
+
 ## 그냥 명령어
 
 디렉토리 만들기
