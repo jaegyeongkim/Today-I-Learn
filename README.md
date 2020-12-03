@@ -28,7 +28,7 @@ SW 개발자로서 꾸준히 준비한 것을 체계화해서 정리하는 곳
 
 
 
-## [CS]()
+## [CS](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/CS)
 
 Computer Science 공부
 
@@ -40,13 +40,13 @@ DreamCoding Git 마스터 과정을 수강하며 정리했던 내용들
 
 
 
-## [Kotlin]()
+## [Kotlin](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/Kotlin)
 
 코틀린 공부
 
 
 
-## [Python]()
+## [Python](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/Python)
 
 파이썬 공부
 
