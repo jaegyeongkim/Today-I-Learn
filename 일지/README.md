@@ -16,62 +16,11 @@ CS와 관련된 것을 적으려고 생각했지만 너무 높은 기준을 가�
 
 **Python**
 
+- lower() / upper()
 - f-string
-
-  python 3.6 이상부터 사용 가능
-
-  ```python
-  s = 'coffee'
-  n = 5
-  result = f'저는 {s}를 좋아합니다. 하루 {n}잔 마셔요'
-  print(result)
-  ```
-
-- find (찾을 문자, 찾기 시작할 위치)
-
-  문자열 중에 특정 문자를 찾을때
-
-  ```python
-  s = '가나다라 마바사아 자차카타 파하'
-  s.find('마')
-  # 5
-  s.find('가')
-  # 0
-  s.find('가',5)
-  # -1
-  ```
-
-- startswith(시작하는 문자, 시작 지점)
-
-  문자열이 특정문자로 시작하는지 여부 확인
-
-  ```python
-  s = '가나다라 마바사아 자차카타 파하'
-  s.startswith('가')
-  # True
-  s.startswith('마')
-  # False
-  
-  s.startswith('마',s.find('마')) #find는 '마' 의 시작지점을 알려줌 : 5
-  # True
-  s.startswith('마',1)
-  # False
-  ```
-
-- endswith (끝나는 문자, 문자열의 시작, 문자열의 끝)
-
-  ```python
-  s = '가나다라 마바사아 자차카타 파하'
-  s.endswith('마')
-  # False
-  s.endswith('하')
-  # True
-  
-  s.endswith('마',0,10)
-  # False
-  s.endswith('마',0,6)
-  # True
-  ```
+- find
+- startswith
+- endswith
 
 **Kotlin**
 
