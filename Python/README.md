@@ -1,3 +1,27 @@
+## index()
+
+()안의 값을 입력하면 index 중 맨 앞에 있는 index를 찾아준다.
+
+```python
+arr = [1, 2, 3, 3, 4, 5, 6]
+arr.index(3)
+>> 2
+```
+
+## numpy.where()
+
+index() 하나만 찾아주니 전부를 찾아보자.
+
+알고리즘을 풀면서 좋은 방법인지는 모르겠다.
+
+```python
+import numpy
+a = [1, 2, 3, 3, 3, 4, 5, 6]
+a = numpy.array(a)	# 먼저 리스트를 배열로 변환시켜 준다. list to array
+print(numpy.where(a == 3))
+>> (array([2, 3, 4], dtype=int64),)
+```
+
 ## pow
 
 제곱, 제곱근, 세제곱, 세제곱 등등

@@ -32,6 +32,18 @@ Python, pip 실행 경로가 꼬여서 Permission denied 에러가 떠서 정말
 
 git config --global core.editor "code" 명령어는 설치 뒤 껐다 켜야 실행된다는 점! 으하하하
 
+**Kotlin**
+
+- Lambda
+- DataClass
+- Companion object
+- Object
+
+ **Python**
+
+- index()
+- numpy.where()
+
 ## 2020-12-03
 
 **Python**

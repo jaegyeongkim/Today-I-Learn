@@ -1,5 +1,7 @@
 # Kotlin
 
+[TOC]
+
 ## 문법
 
 ### Main
@@ -275,5 +277,189 @@ fun main() {
 }
 ```
 
+### Lambda
 
+#### Lambda의 기본
+
+람다식은 우리가 마치 value 처럼 다룰 수 있는 익명함수이다.
+
+1. 메소드의 파라미터로 넘겨줄 수 있다. fun maxBy(a : Int)
+2. return 값으로 사용할 수 없다.
+3. 타입 추론이 가능하다. 단, 기본적인 부분은 적어줘야한다.
+
+```kotlin
+
+
+// 람다의 기본정의
+// val lamdaName : Type = (argumentList -> codeBody)
+
+val square : (Int) -> (Int) = {number -> number+number}
+
+val nameAge = {name : String, age : Int ->
+    "my name is ${name} I'm ${age}"
+}
+
+fun main() {
+    println(square(12))
+    println(nameAge("jake", 26))
+}
+```
+
+#### 확장 함수
+
+```kotlin
+fun main() {
+    val a = "Jake Said "
+    val b = "Mac Said "
+    println(a.pizzaIsGreat())
+    println(b.pizzaIsGreat())
+
+    println(extendString("ariana", 27))
+}
+
+// 확장함수
+val pizzaIsGreat : String.() -> String = {
+    this + "Pizza is the best!"
+}
+
+fun extendString(name : String, age : Int) : String {
+    val introduceMyself : String.(Int) -> String = {"I am ${this} and ${it} years old"} 
+    // this: Object를 가리키고, it: 파타미터가 하나일 경우
+    return name.introduceMyself(age)
+}
+```
+
+#### 람다의 리턴
+
+```kotlin
+fun main() {
+    println(calculateGrade(98))
+    println(calculateGrade(981))
+}
+// 람다의 Return
+val calculateGrade : (Int) -> String = {
+    when(it) {
+        in 0..40 -> "Fail"
+        in 41..70 -> "Pass"
+        in 71..100 -> "Perfect"
+        else -> "Error"
+    }
+}
+```
+
+#### 람다를 표현하는 2가지 방법
+
+```kotlin
+fun main() {
+    val lambda = {number : Double ->
+        number == 4.3213
+    }
+    println(invokeLambda(lambda))
+    println(invokeLambda({it > 3.22}))
+    println(invokeLambda { it > 3.22 })
+}
+
+fun invokeLambda(lambda : (Double) ->  Boolean) : Boolean {
+    return lambda(5.2343)
+}
+```
+
+##### 익명함수
+
+1. Kotlin interface가 아닌 자바 인터페이스여야 한다.
+2. 그 인터페이스에 딱 하나의 함수만 있어야한다.
+
+### Data Class
+
+관리하기 편하다.
+
+```kotlin
+data class Ticket(val companyName : String, val name : String, var data : String, var seatNumber : Int)
+
+fun main() {
+    val ticketA = Ticket("koreanAir", "Jake", "2020-12-04", 14)
+
+}
+```
+
+Class와 비교하면
+
+```kotlin
+data class Ticket(val companyName : String, val name : String, var data : String, var seatNumber : Int)
+// data class
+class TicketNormal(val companyName : String, val name : String, var data : String, var seatNumber : Int)
+// class
+fun main() {
+    val ticketA = Ticket("koreanAir", "Jake", "2020-12-04", 14)
+    val ticketB = TicketNormal("koreanAir", "Jake", "2020-12-04", 14)
+    println(ticketA)	// 
+    println(ticketB)	// 주소값으로 나옴
+}
+>> Ticket(companyName=koreanAir, name=Jake, data=2020-12-04, seatNumber=14)
+>> com.example.myapplication.TicketNormal@5cad8086
+```
+
+### Companion object
+
+Companion object의 역할: Private Method or Property 읽을 수 있음, Java의 Static 역할
+
+```kotlin
+class Book private constructor(val id : Int, val name : String) {
+
+    companion object BookFactory : IdProvider{
+
+        override fun getId(): Int{
+            return 444
+        }
+        val myBook = "new book"
+        fun create() = Book(0, "animal fare")
+        fun create1() = Book(0, myBook)
+        fun create2() = Book(getId(), myBook)
+    }
+}
+
+interface IdProvider {
+    fun getId() : Int
+}
+
+fun main() {
+    val book = Book.create()
+    val book1 = Book.create1()
+    val book2 = Book.create2()
+    println("${book.id} ${book.name}")
+    println("${book1.id} ${book1.name}")
+    println("${book2.id} ${book2.name}")
+}
+```
+
+### Object
+
+Singleton Pattern
+이 모든 앱을 실행할때 딱 한번 실행된다.  -> 불필요한 메모리 사용 X
+
+```kotlin
+object CarFactory {
+    val cars = mutableListOf<Car>()
+
+    fun makeCar(horsePower: Int) : Car {
+        val car = Car(horsePower)
+        cars.add(car)
+        return car
+    }
+}
+
+data class Car(val horsePower : Int)
+
+fun main() {
+    val car = CarFactory.makeCar(10)
+    val car2 = CarFactory.makeCar(200)
+    
+    println(car)
+    println(car2)
+    println(CarFactory.cars.size.toString())
+}
+>> Car(horsePower=10)
+>> Car(horsePower=200)
+>> 2
+```
 
