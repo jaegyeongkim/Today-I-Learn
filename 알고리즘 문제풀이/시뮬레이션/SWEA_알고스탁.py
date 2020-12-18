@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('알고스탁.txt')
+sys.stdin = open('SWEA_알고스탁.txt')
 T = int(input())
 
 def differ(i):
