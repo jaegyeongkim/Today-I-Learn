@@ -1,3 +1,13 @@
+## join
+
+```python
+stack = 'abc'
+print(''.join(stack))
+>> abc
+```
+
+
+
 ## index()
 
 ()안의 값을 입력하면 index 중 맨 앞에 있는 index를 찾아준다.
