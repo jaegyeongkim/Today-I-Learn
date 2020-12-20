@@ -1,3 +1,7 @@
+## sum
+
+sum 자체에 lambda 가 있음
+
 ## join
 
 ```python
@@ -5,8 +9,6 @@ stack = 'abc'
 print(''.join(stack))
 >> abc
 ```
-
-
 
 ## index()
 
