@@ -16,7 +16,7 @@ Language
 
 ## 문법
 
-### SELECT
+### Select
 
 ```sql
 SELECT * 		-- 사용하고 싶은 Column 이름을 작성
@@ -27,7 +27,7 @@ SELECT name, genre, year
 FROM movies;
 ```
 
-### AS
+### As
 
 ~~처럼
 

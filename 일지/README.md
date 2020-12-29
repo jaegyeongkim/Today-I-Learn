@@ -12,7 +12,38 @@ CS와 관련된 것을 적으려고 생각했지만 너무 높은 기준을 가�
 
 본질을 잊으면 안 되니까 CS 배운 거를 적는 곳 + 알고리즘 적는 곳
 
+## 2020-12-29(화)
+
+**SQL**
+
+- Select
+- As
+- Distinct
+- Where
+- Like
+- Null
+- Between
+- And
+- Or
+- Order By
+- Limit
+- Case
+- Count
+- Sum
+- Max, Min
+- Average
+- Round
+- Group By
+- Having
+- Join (Inner Join)
+- Left Join 
+- Cross Join
+- Union
+- With
+
 ## 2020-12-28(월)
+
+**SQL**
 
 ## 2020-12-24(목)
 
