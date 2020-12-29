@@ -13,6 +13,7 @@
 * [Git](#Git)
 * [Kotlin](#Kotlin)
 * [Python](#Python)
+* [SQL](#SQL)
 * [알고리즘](#알고리즘)
 * [일지](#일지)
 
@@ -52,7 +53,7 @@ DreamCoding Git 마스터 과정을 수강하며 정리했던 내용들
 
 
 
-## SQL
+## [SQL](https://github.com/jaegyeongkim/Today-I-Learn/tree/main/SQL)
 
 SQL 공부
 
