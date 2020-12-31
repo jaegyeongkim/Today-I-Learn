@@ -12,7 +12,25 @@ Language
 
 매우 쉽다는 특징이 있다.
 
+## ERD
 
+Entity Relationship Diagram
+
+정보 - 그룹 - 관계
+
+### 특징
+
+1. 데이터를 그룹화할 수 있다.
+2. 자원을 아낄 수 있다.  (그룹끼리 부를 수 있다.)
+3. Join -> 필요할때마다 순간순간 합성할 수 있다.
+
+Entity -> Table
+
+Attribute -> Column
+
+Relation -> PK, FK
+
+Tuple -> Row
 
 ## 문법
 
