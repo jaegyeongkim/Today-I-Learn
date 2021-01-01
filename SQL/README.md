@@ -274,6 +274,8 @@ FROM fake_apps;
 
 중복 제거, 특정 특징을 가진 Group을 원한다.
 
+select에 포함이 있어야함
+
 ```sql
 SELECT category, SUM(downloads)
 FROM fake_apps
