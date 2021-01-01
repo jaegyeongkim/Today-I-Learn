@@ -32,6 +32,32 @@ Relation -> PK, FK
 
 Tuple -> Row
 
+
+
+#### Identifier (식별자, PK)
+
+![1](asset/1.PNG)
+
+#### Relationship (관계, 외래키, FK)
+
+![2](asset/2.PNG)
+
+#### Cardinality (기수, 1:1, 1:N, N:M)
+
+![3](asset/3.PNG)
+
+![4](asset/4.PNG)
+
+![5](asset/5.PNG)
+
+#### Optionality (1:1, 1:N, )
+
+![6](asset/6.PNG)
+
+![7](asset/7.PNG)
+
+http://erd.yah.ac/
+
 ## 문법
 
 ### Select
