@@ -4,9 +4,38 @@
 
 ### 1번
 
+**Country 별로 ContactName이 ‘A’로 시작하는 Customer의 숫자를 세는 쿼리를 작성하세요.**
+
+```sql
+SELECT count(*) FROM Customers
+where ContactName like 'A%';
+```
+
 ### 2번
 
+**Customer 별로 Order한 Product의 총 Quantity를 세는 쿼리를 작성하세요.**
+
+```sql
+select CustomerID, sum(Quantity)
+from Orders
+join OrderDetails
+on Orders.OrderID = OrderDetails.OrderID
+group by CustomerID
+```
+
 ### 3번
+
+**년월별, Employee별로 Product를 몇 개씩 판매했는지와 그 Employee의 FirstName을 표시하는 쿼리를 작성하세요.**
+
+```sql
+SELECT strftime('%Y-%m', OrderDate) as month, Orders.EmployeeID, OrderDetails.Quantity, Employees.FirstName
+from Orders
+join OrderDetails
+on Orders.OrderID = OrderDetails.OrderID
+join Employees
+on Orders.EmployeeID = Employees.EmployeeID
+group by month, Orders.EmployeeID
+```
 
 ## 2주차
 
@@ -70,6 +99,28 @@ HAVING COUNT(product_id) > 3;
 ### 5-1번
 
 **2006년 1분기, 2분기 연속으로 하나 이상의 주문(order)을 받은 직원(employee)을 찾는 쿼리를 작성하세요. (order_status는 신경쓰지 않으셔도 됩니다.) (힌트: sub-query, inner join)**
+
+```sql
+SELECT t1.employee_id,
+(
+    SELECT CONCAT(employees.last_name, ' ', employees.first_name) 
+    FROM employees
+    WHERE employees.id = t1.employee_id 
+) AS '직원 이름'
+FROM (
+    SELECT DISTINCT employee_id
+    FROM orders
+    WHERE date_format(order_date, '%Y-%m') BETWEEN '2006-01' AND '2006-03'
+) AS t1
+JOIN(
+    SELECT DISTINCT employee_id
+    FROM orders
+    WHERE date_format(order_date, '%Y-%m') BETWEEN '2006-04' AND '2006-06'
+) AS t2
+ON t1.employee_id = t2.employee_id
+```
+
+
 
 ### 5-2번
 
