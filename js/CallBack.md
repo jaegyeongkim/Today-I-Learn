@@ -1,6 +1,4 @@
-## JavaScript
-
-## CallBack
+# CallBack
 
 정의: 파라미터로 함수를 전달하는 함수
 
@@ -19,11 +17,11 @@ number.forEach(x => {
 10
 ```
 
-### 규칙
+## 규칙
 
-#### 익명의 함수 사용
+### 익명의 함수 사용
 
-##### 함수의 이름만 넘겨준다
+### 함수의 이름만 넘겨준다
 
 ```js
 function whatYourName(name, callback) {
@@ -42,7 +40,7 @@ name: miniddo
 finish function
 ```
 
-### Callback 지옥
+## Callback 지옥
 
 비동기 호출이 자주 일어나는 프로그램의 경우 '콜백 지옥'이 발생한다.
 함수의 매개변수로 넘겨지는 콜백 함수가 반복되어 코드의 들여쓰기 수준이 감당하기 힘들어질 정도로 깊어지는 현상이다.
@@ -134,6 +132,8 @@ finish!!
 
 
 
-### 참고
+## 참고
 
 https://velog.io/@minidoo/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BD%9C%EB%B0%B1-%ED%95%A8%EC%88%98Callback-Function
+
+https://www.youtube.com/watch?v=s1vpVCrT8f4&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=12
